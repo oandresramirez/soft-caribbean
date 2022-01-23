@@ -1,0 +1,48 @@
+<!-- Page content holder -->
+<br>
+<div class="page-content p-1 table-responsive" id="content">
+    <div class="shadow-sm p-3 mb-3 bg-white rounded">
+        <h4>Consultar clientes</h4>
+    </div>
+
+
+    <div class="shadow-sm p-3 mb-3 bg-white rounded">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Consultar por id" [(ngModel)]="seach">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="submit" (click)="showClient()">Filtrar</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="shadow p-3 mb-3 bg-white rounded " style="width: 100%;">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nm cliente</th>
+                        <th>Ds nombres</th>
+                        <th>Ds apellidos</th>
+                        <th>Ds direccion</th>
+                        <th>Ds correo</th>
+                        <th>Cd telefono</th>
+                        <th>Cd telefono alterno</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of listClient">
+                        <td>{{data.cus_nmcliente}}</td>
+                        <td>{{data.cus_dsnombres}}</td>
+                        <td>{{data.cus_dsapellidos}}</td>
+                        <td>{{data.cus_dsdireccion}}</td>
+                        <td>{{data.cus_dscorreo}}</td>
+                        <td>{{data.cus_cdtelefono}}</td>
+                        <td>{{data.cus_cdtelefonoalter}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

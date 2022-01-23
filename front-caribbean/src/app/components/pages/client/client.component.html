@@ -1,0 +1,191 @@
+<!-- Page content holder -->
+<br>
+<div class="page-content p-1 table-responsive" id="content">
+    <div class="shadow-sm p-3 mb-3 bg-white rounded">
+        <h4>Creación y actualización de clientes</h4>
+    </div>
+
+
+    <div class="shadow p-3 mb-3 bg-white rounded " style="width: 100%;">
+        <div class="container">
+            <form [formGroup]="formGroupClient">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="">Nm cliente</label>
+                        <input type="text" class="form-control form-control-sm form-control-sm"
+                            formControlName="cus_nmcliente">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds nombres</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsnombres">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds apellidos</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsapellidos">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds direccion</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsdireccion">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds correo</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dscorreo">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Cd telefono</label>
+                        <input type="tel" class="form-control form-control-sm" formControlName="cus_cdtelefono">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Cd telefono alterno</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_cdtelefonoalter">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Cd celular</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_cdcelular">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nm cargo</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_nmcargo">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds cargo</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dscargo">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nm ciudad</label>
+                        <input type="number" class="form-control form-control-sm" formControlName="cus_nmciudad">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds ciudad</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsciudad">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Fenacimiento</label>
+                        <input type="date" class="form-control form-control-sm" formControlName="cus_fenacimiento">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Genero</label>
+                        <select class="form-control form-control-sm" formControlName="cus_genero">
+                            <option>Genero</option>
+                            <option
+                                *ngFor="let data of [{code:'M', description:'Masculino'}, {code:'F', description:'Femenino'}]"
+                                value="{{data.code}}">{{data.description}}</option>
+                        </select>
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nm comunidad</label>
+                        <input type="number" class="form-control form-control-sm" formControlName="cus_nmcomunidad">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds comunidad</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dscomunidad">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds empresa labora</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsempresalabora">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nm division</label>
+                        <input type="number" class="form-control form-control-sm" formControlName="cus_nmdivision">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds division</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dsdivision">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Nm pais</label>
+                        <input type="number" class="form-control form-control-sm" formControlName="cus_nmpais">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Ds pais</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_dspais">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Hobbies</label>
+                        <input type="text" class="form-control form-control-sm" formControlName="cus_hobbies">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Fecha baja</label>
+                        <input type="date" class="form-control form-control-sm" formControlName="cus_febaja">
+                        <div class="mb-0"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">Fecha registro</label>
+                        <input type="date" class="form-control form-control-sm" formControlName="cus_feregistro">
+                        <div class="mb-0"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div style="width: 100%; text-align: right;">
+        <span>
+            <button type="button" class="btn btn-danger mr-2" (click)="resetValue()">Limpiar</button>
+            <button type="button" class="btn btn-primary" (click)="insertClient()"
+                *ngIf="!this.formGroupClient.value.nmid">Crear cliente</button>
+            <button type="button" class="btn btn-primary" (click)="updateClient()"
+                *ngIf="this.formGroupClient.value.nmid">Actualizar cliente</button>
+        </span>
+    </div>
+    <div class="mb-4"></div>
+    <div class="shadow p-3 mb-3 bg-white rounded " style="width: 100%;">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>Nm cliente</th>
+                        <th>Ds nombres</th>
+                        <th>Ds apellidos</th>
+                        <th>Ds direccion</th>
+                        <th>Ds correo</th>
+                        <th>Cd telefono</th>
+                        <th>Cd telefono alterno</th>
+                        <th></th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of listClient">
+                        <td>{{data.nmid}}</td>
+                        <td>{{data.cus_nmcliente}}</td>
+                        <td>{{data.cus_dsnombres}}</td>
+                        <td>{{data.cus_dsapellidos}}</td>
+                        <td>{{data.cus_dsdireccion}}</td>
+                        <td>{{data.cus_dscorreo}}</td>
+                        <td>{{data.cus_cdtelefono}}</td>
+                        <td>{{data.cus_cdtelefonoalter}}</td>
+                        <td><button type="button" class="btn btn-warning btn-sm" (click)="selectClient(data)"><i
+                                    class="fas fa-edit"></i></button> 
+                         <button type="button" class="btn btn-danger btn-sm" (click)="deleteClient(data.nmid)"><i
+                                    class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
